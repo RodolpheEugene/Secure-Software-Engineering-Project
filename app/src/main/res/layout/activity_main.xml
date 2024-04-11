@@ -2,18 +2,77 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".LoginScreen">
+
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/gameTitleEditText"
+        android:layout_width="327dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/blue"
+        android:text="M.S.A.T.S"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="260dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="88dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Username"
+
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds" />
+
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="260dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="36dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Password"
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="150dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="228dp"
+        android:backgroundTint="@color/blue"
+        android:text="Login"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:layout_width="254dp"
+        android:layout_height="184dp"
+        app:layout_constraintBottom_toTopOf="@+id/usernameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameTitleEditText"
+        app:srcCompat="@drawable/profile_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
