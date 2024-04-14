@@ -41,8 +41,7 @@ public class MenuScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // to start next activity
-                Intent intent = new Intent(MenuScreen.this, GameScreen.class);
-                startActivity(intent);
+                getOnBackPressedDispatcher().onBackPressed();
             }
         });
     }
