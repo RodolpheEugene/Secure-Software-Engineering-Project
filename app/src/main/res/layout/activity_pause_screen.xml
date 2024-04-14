@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MenuScreen">
+
+
+    <TextView
+        android:id="@+id/gameTitleEditText"
+        android:layout_width="327dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/blue"
+        android:text="M.S.A.T.S"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resumeButton"
+        android:layout_width="330dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="452dp"
+        android:backgroundTint="@color/white"
+        android:text="RESUME"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/quitButton"
+        android:layout_width="330dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="224dp"
+        android:backgroundTint="@color/white"
+        android:text="QUIT"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumeButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,8 @@
 package com.example.myapplication;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,13 +13,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class GameScreen extends AppCompatActivity {
+public class GameScreen2 extends AppCompatActivity {
     Button answerChoice;
     int timesWrong = 0;
+    boolean completed = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_screen);
+        setContentView(R.layout.activity_game_screen_2);
 
         //finding all buttons and TextViews
         Button answerChoice1 = findViewById(R.id.answerChoice1);
@@ -30,22 +28,23 @@ public class GameScreen extends AppCompatActivity {
         Button answerChoice3 = findViewById(R.id.answerChoice3);
         Button answerChoice4 = findViewById(R.id.answerChoice4);
         Button submitButton = findViewById(R.id.submitButton);
-        Button nextButton = findViewById(R.id.nextButton);
+        Button prevButton = findViewById(R.id.prevButton);
         Button pauseButton = findViewById(R.id.pauseButton);
         TextView systemPrompt = findViewById(R.id.systemPrompt);
 
         //setting question number
         TextView questionNumber = findViewById(R.id.questionNumberText);
-        questionNumber.setText("Question 1 of 2");
+        questionNumber.setText("Question 2 of 2");
 
-        nextButton.setOnClickListener(e ->{
-            Intent intent = new Intent(this, GameScreen2.class);
-            startActivity(intent);
+        prevButton.setOnClickListener(e ->{
+            getOnBackPressedDispatcher().onBackPressed();
         });
         pauseButton.setOnClickListener(e ->{
             Intent intent = new Intent(this, PauseScreen.class);
             startActivity(intent);
         });
+
+
 
         answerChoice1.setOnClickListener(e ->{
             answerChoice = answerChoice1;
@@ -70,11 +69,11 @@ public class GameScreen extends AppCompatActivity {
 
         submitButton.setOnClickListener(e ->{
             if(timesWrong == 2 && answerChoice != answerChoice3){
+                completed = true;
                 answerChoice3.setBackgroundColor(Color.GREEN);
                 answerChoice.setBackgroundColor(Color.RED);
                 answerChoice.setTextColor(Color.WHITE);
                 systemPrompt.setText("The correct answer was C. You should always understand what is happening to your data before giving anyone/anything permission to handle it.");
-                submitButton.setVisibility(View.GONE);
             }
             else if(answerChoice != answerChoice3){
                 timesWrong++;
@@ -83,12 +82,10 @@ public class GameScreen extends AppCompatActivity {
                 systemPrompt.setText("Wrong! Please try again and pick another answer.");
             }
             else{
+                completed = true;
                 answerChoice.setBackgroundColor(Color.GREEN);
                 systemPrompt.setText("Correct! You should always understand what is happening to your data before giving anyone/anything permission to handle it.");
-                submitButton.setVisibility(View.GONE);
             }
         });
-
-
     }
 }
