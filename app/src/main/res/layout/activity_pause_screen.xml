@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/resumeButton"
+        android:id="@+id/question1Achievement"
         android:layout_width="330dp"
         android:layout_height="59dp"
         android:layout_marginBottom="452dp"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/quitButton"
+        android:id="@+id/returnButton"
         android:layout_width="330dp"
         android:layout_height="59dp"
         android:layout_marginBottom="224dp"
@@ -51,6 +51,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resumeButton" />
+        app:layout_constraintTop_toBottomOf="@+id/question1Achievement" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
