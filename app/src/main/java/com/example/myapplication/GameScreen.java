@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class GameScreen extends AppCompatActivity {
         Button submitButton = findViewById(R.id.submitButton);
         Button nextButton = findViewById(R.id.nextButton);
         Button pauseButton = findViewById(R.id.pauseButton);
+        ImageButton achievementsButton = findViewById(R.id.achievementsButton);
         TextView systemPrompt = findViewById(R.id.systemPrompt);
 
         //setting question number
@@ -44,6 +46,10 @@ public class GameScreen extends AppCompatActivity {
         });
         pauseButton.setOnClickListener(e ->{
             Intent intent = new Intent(this, PauseScreen.class);
+            startActivity(intent);
+        });
+        achievementsButton.setOnClickListener(e ->{
+            Intent intent = new Intent(this, AchievementsScreen.class);
             startActivity(intent);
         });
 
