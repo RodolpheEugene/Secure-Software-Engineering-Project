@@ -34,6 +34,7 @@ public class GameScreen extends AppCompatActivity {
         Button nextButton = findViewById(R.id.nextButton);
         Button pauseButton = findViewById(R.id.pauseButton);
         ImageButton achievementsButton = findViewById(R.id.achievementsButton);
+        ImageButton settingsButton = findViewById(R.id.settingsButton);
         TextView systemPrompt = findViewById(R.id.systemPrompt);
 
         //setting question number
@@ -50,6 +51,10 @@ public class GameScreen extends AppCompatActivity {
         });
         achievementsButton.setOnClickListener(e ->{
             Intent intent = new Intent(this, AchievementsScreen.class);
+            startActivity(intent);
+        });
+        settingsButton.setOnClickListener(e ->{
+            Intent intent = new Intent(this, SettingsScreen.class);
             startActivity(intent);
         });
 
