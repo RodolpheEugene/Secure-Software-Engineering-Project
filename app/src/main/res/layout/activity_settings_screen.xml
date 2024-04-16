@@ -135,7 +135,8 @@
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toEndOf="@+id/textView6" />
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        tools:ignore="DuplicateIds,NotSibling" />
 
     <SeekBar
         android:id="@+id/seekBar"
@@ -145,7 +146,8 @@
         app:layout_constraintBottom_toTopOf="@+id/notificationSwitch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        tools:ignore="DuplicateIds" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
